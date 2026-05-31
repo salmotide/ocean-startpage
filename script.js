@@ -60,3 +60,15 @@ function updateClock() {
 
 updateClock();
 setInterval(updateClock, 1000);
+
+const youtubeLink = document.getElementById("youtube-link");
+const searchInput = document.getElementById("seacrh");
+
+youtubeLink.addEventListener("click", (event) => {
+
+  if (query) {
+    window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`, "_blank");
+  } else{
+    window.open("https://youtube.com", "_blank");
+  }
+});

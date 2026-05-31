@@ -135,7 +135,7 @@ header img{
 }
 
 .widget-card{
-  width: 150px;
+  width: auto;
   padding: 16px;
   border-radius:16px;
 
