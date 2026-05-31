@@ -89,3 +89,17 @@ githubLink.addEventListener("click", (event) => {
   window.open(`https://github.com`, "_blank")
   }
 });
+
+const wikiLink = document.getElementById("wiki-link");
+
+wikiLink.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const query = searchInput.value.trim();
+
+  if(query) {
+    window.open(`https://en.wikipedia.org/wiki/${encodeURIComponent(query)}`, "_blank")
+  } else {
+    window.open(`https://en.wikipedia.org/wiki/`, "_blank")
+  }
+});
