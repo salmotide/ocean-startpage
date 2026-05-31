@@ -6,23 +6,39 @@ navigator.geolocation.getCurrentPosition(
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
 
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`;
 
     const response = await fetch(url);
     const data = await response.json();
-    
+
+    weatherTemp.textContent = `${data.current.temperature_2m}°C`;
+
     const locationResponse = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`);
     const locationData = await locationResponse.json();
 
-    weatherTemp.textContent = `${data.current.temperature_2m}°C`;
     weatherStatus.textContent =
       locationData.address.city ||
       locationData.address.town ||
       locationData.address.village;
+
+    const weatherIcon = document.getElementById("weather-icon");
+    const weatherCode = data.current.weather_code;
+
+    if (weatherCode === 0) {
+      weatherIcon.textContent = "☀️";
+    } else if (weatherCode <= 3) {
+      weatherIcon.textContent = "🌤️";
+    } else if (weatherCode <= 48) {
+      weatherIcon.textContent = "☁️";
+    } else if (weatherCode <= 67) {
+     weatherIcon.textContent = "🌧️";
+    } else {
+      weatherIcon.textContent = "⛈️";
+    }
   },
   () => {
     weatherStatus.textContent = "Location denied";
-  }
+  },
 );
 
 const currencyRate = document.getElementById("currency-rate");
