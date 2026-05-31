@@ -62,13 +62,30 @@ updateClock();
 setInterval(updateClock, 1000);
 
 const youtubeLink = document.getElementById("youtube-link");
-const searchInput = document.getElementById("seacrh");
+const searchInput = document.getElementById("search");
 
 youtubeLink.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const query = searchInput.value.trim();
 
   if (query) {
     window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`, "_blank");
   } else{
     window.open("https://youtube.com", "_blank");
+  }
+});
+
+const githubLink = document.getElementById("github-link");
+
+githubLink.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const query = searchInput.value.trim();
+
+  if(query) {
+    window.open(`https://github.com/search?q=${encodeURIComponent(query)}`, "_blank")
+  } else{
+  window.open(`https://github.com`, "_blank")
   }
 });
