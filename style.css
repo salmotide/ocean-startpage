@@ -1,0 +1,126 @@
+:root{
+  --bg: #050B16;
+  --surface: #0B1428;
+
+  --ocean: #1D4ED8;
+  --ocean-hover: #2563EB;
+
+  --sea-light: #5EEAD4;
+  --cyan: #06B6D4;
+
+  --text: #F8FAFC;
+  --secondary: #94A3B8;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(5,11,22,.65), rgba(5,11,22, .85)),
+    url("image/bg.png");
+  background-size: cover;
+  background-position: center;
+  color:var(--text);
+}
+
+header{
+  height: 72px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(11, 20, 40, .55);
+  backdrop-filter: blur(12px);
+}
+
+header img{
+  width: 42px;
+  height:42px;
+  border-radius:50%;
+}
+
+.hero{
+  min-height: calc(100vh - 72px);
+
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 80px 80px;
+  gap: 24px;
+}
+
+.hero form{
+  width: 420px;
+  display: flex;
+}
+
+.hero input{
+  width:100%;
+  padding: 16px 24px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(29, 78, 216, .12);
+  color: var(--text);
+  backdrop-filter: blur(12px);
+}
+
+.hero input:focus{
+  border: 1px solid var(--ocean);
+  box-shadow: 0 0 20px rgba(29, 78, 216, .25);
+}
+
+.shortcuts{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.shortcuts a img{
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.shortcuts li{
+  display: block;
+}
+
+.shortcuts a span{
+  line-height: 1;
+}
+
+.shortcuts a{
+  width: 180px;
+  height: 52px;
+  border-radius: 14px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+
+  padding: 0 18px;
+
+  background: rgba(11, 20, 40, .55);
+  border: 1px solid rgba(255, 255, 255, .08);
+  backdrop-filter: blur(12px);
+
+  text-decoration: none;
+  color: var(--text);
+  transition: .3s;
+}
+
+.shortcuts a:hover{
+  transform: translateY(8px);
+  background: rgba(29, 78, 216, .35);
+}
