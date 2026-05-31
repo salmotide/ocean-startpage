@@ -124,3 +124,52 @@ header img{
   transform: translateY(8px);
   background: rgba(29, 78, 216, .35);
 }
+
+.widgets{
+  position: absolute;
+  top: 96px;
+  right: 80px;
+
+  display: flex;
+  gap: 14px;
+}
+
+.widget-card{
+  width: 150px;
+  padding: 16px;
+  border-radius:16px;
+
+  background: rgba(11, 20, 40, .55);
+  border: 1px solid rgba(255, 255, 255, .08);
+  backdrop-filter: blur(12px);
+}
+
+.widget-card span,
+.widget-card small{
+  color:var(--secondary);
+}
+
+.widget-card strong{
+  display: block;
+  margin: 8px 0;
+  color:var(--text);
+}
+
+.clock-widget{
+  position: absolute;
+  top 220px;
+  right:80px;
+
+  text-align:right;
+}
+
+.clock-widget p{
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+.clock-widget h1{
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+}
