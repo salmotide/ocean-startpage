@@ -1,0 +1,15 @@
+#pixel-character{
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+
+  width: 64px;
+  height: 64px;
+
+  image-rendering: pixelated;
+  z-index: 9999;
+
+  pointer-events: auto;
+  user-select: none;
+  cursor: pointer;
+}

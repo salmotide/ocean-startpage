@@ -52,7 +52,7 @@ async function loadCurrency() {
     const data = await response.json();
     const rate = Math.round(data.rates.IDR);
 
-    currencyRate.textContent = `$1 = Rp.${rate.toLocaleString("id-ID")}`;
+    currencyRate.textContent = `$1 = ${rate.toLocaleString("id-ID")} IDR`;
   } catch (error) {
     currencyRate.textContent = "Currency unavailable";
     console.error(error);

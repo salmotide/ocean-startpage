@@ -98,3 +98,26 @@ document.querySelectorAll("[data-wallpaper]").forEach(button => {
     setWallpaper(wallpaper);
   });
 });
+
+const wallpaperUrl = document.getElementById("wallpaper-url");
+const applyWallpaperUrl = document.getElementById("apply-wallpaper-url");
+
+applyWallpaperUrl.addEventListener("click", () => {
+  const url = wallpaperUrl.value.trim();
+
+  if (!url) return;
+
+  const testImage = new Image();
+
+  testImage.onload = () => {
+    localStorage.setItem("wallpaper", url);
+    setWallpaper(url);
+    wallpaperUrl.value = "";
+  };
+
+  testImage.onerror = () => {
+    alert("URL harus direct image, bukan halaman web. Pakai link yang berakhir .jpg, .png, atau .webp.");
+  };
+
+  testImage.src = url;
+});
