@@ -26,18 +26,7 @@ A customizable browser startpage inspired by ocean themes, desktop pets, and pro
 
 ---
 
-# Installation
-
-Clone repository:
-
-```bash
-git clone https://github.com/salmotide/ocean-startpage.git
-cd ocean-startpage
-```
-
-Open `index.html` in your browser or use Live Server.
-
-## Overview
+# Overview
 
 Ocean Startpage is a personal browser homepage designed to make your daily browsing experience more enjoyable and productive.
 
@@ -60,6 +49,40 @@ The project is built using only:
 * JavaScript
 
 No frameworks are required.
+
+---
+
+# Project Goals
+
+Ocean Startpage was created as a personal project to learn:
+
+* JavaScript DOM manipulation
+* Local Storage
+* UI customization
+* Interactive browser experiences
+* Game-like character systems
+
+---
+
+# Technologies
+
+* HTML5
+* CSS3
+* JavaScript (ES6)
+* Local Storage API
+
+---
+
+# Installation
+
+Clone repository:
+
+```bash
+git clone https://github.com/salmotide/ocean-startpage.git
+cd ocean-startpage
+```
+
+Open `index.html` in your browser or use Live Server.
 
 ---
 
