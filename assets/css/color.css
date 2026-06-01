@@ -36,4 +36,32 @@
   --ocean-glow:rgba(var(--ocean-rgb), .5);
 }
 
+   /* Theme */
+  [data-theme="midnight"]{
+  --bg:#050816;
+  --surface:#111827;
+  --ocean:#6366F1;
+  --sea:#8B5CF6;
+  --cyan:#22D3EE;
+
+  --surface-rgb:17,24,39;
+  --ocean-rgb:99,102,241;
+  --sea-rgb:139,92,246;
+  --cyan-rgb:34,211,238;
+}
+
+[data-theme="sakura"]{
+  --bg:#120817;
+  --surface:#24111F;
+  --ocean:#DB2777;
+  --sea:#F9A8D4;
+  --cyan:#FB7185;
+
+  --surface-rgb:36,17,31;
+  --ocean-rgb:219,39,119;
+  --sea-rgb:249,168,212;
+  --cyan-rgb:251,113,133;
+}
+
+
 

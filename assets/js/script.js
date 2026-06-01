@@ -52,7 +52,7 @@ async function loadCurrency() {
     const data = await response.json();
     const rate = Math.round(data.rates.IDR);
 
-    currencyRate.textContent = `$1 = ${rate.toLocaleString("id-ID")} IDR`;
+    currencyRate.textContent = `$1 = Rp.${rate.toLocaleString("id-ID")}`;
   } catch (error) {
     currencyRate.textContent = "Currency unavailable";
     console.error(error);
@@ -122,80 +122,4 @@ wikiLink.addEventListener("click", (event) => {
   } else {
     window.open(`https://en.wikipedia.org/wiki/`, "_blank")
   }
-});
-
-/*Wallpaper Custom*/
-const wallpaperInput = document.getElementById("wallpaper-input");
-const resetWallpaper = document.getElementById("reset-wallpaper");
-const defaultWallpaper = "image/bg.png";
-
-function setWallpaper(imageUrl) {
-  document.body.style.backgroundImage = `
-    linear-gradient(
-      rgba(5,11,22,.65),
-      rgba(5,11,22,.85)
-    ),
-    url("${imageUrl}")
-  `;
-}
-
-const savedWallpaper = localStorage.getItem("wallpaper");
-
-if (savedWallpaper) {
-  setWallpaper(savedWallpaper);
-}
-
-wallpaperInput.addEventListener("change", () => {
-  const file = wallpaperInput.files[0];
-
-  if (!file) return;
-
-  const reader = new FileReader();
-
-  reader.onload = () => {
-    const img = new Image();
-
-    img.onload = () => {
-      const canvas = document.createElement("canvas");
-      const ctx = canvas.getContext("2d");
-
-      const maxWidth = 1280;
-      const scale = Math.min(maxWidth / img.width, 1);
-
-      canvas.width = img.width * scale;
-      canvas.height = img.height * scale;
-
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-      const compressedImage = canvas.toDataURL("image/jpeg", 0.55);
-
-      try {
-        localStorage.setItem("wallpaper", compressedImage);
-      } catch (error) {
-        console.error("Wallpaper terlalu besar untuk localStorage", error);
-      }
-
-      setWallpaper(compressedImage);
-    };
-
-    img.src = reader.result;
-  };
-
-  reader.readAsDataURL(file);
-});
-
-resetWallpaper.addEventListener("click", () => {
-  localStorage.removeItem("wallpaper");
-  setWallpaper(defaultWallpaper);
-});
-
-resetWallpaper.addEventListener("click", () => {
-  localStorage.removeItem("wallpaper");
-  document.body.style.backgroundImage = `
-    linear-gradient(
-      rgba(5,11,22,.65),
-      rgba(5,11,22,.85)
-    ),
-    url(${defaultWallpaper})
-  `;
 });

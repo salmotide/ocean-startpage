@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/color.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/todo.css">
+    <link rel="stylesheet" href="assets/css/wall.css">
 </head>
 <body>
     <header>
@@ -28,7 +29,7 @@
           <span>Currency</span>
           <p class="weather-main">
             <span>💵</span>
-            <span id="currency-rate">$1 = -- IDR</span>
+            <span id="currency-rate">$1 = Rp.-- </span>
           </p>
           <small>USD to IDR</small>
         </div>
@@ -113,12 +114,45 @@
     </main>
 
     <div class="wallpaper-control">
-      <label for="wallpaper-input">Change Wallpaper</label>
-      <input type="file" id="wallpaper-input" accept="image/*">
-      <button id="reset-wallpaper">Reset</button>
+      <button id="open-personalize">Customize</button>
     </div>
 
-  <script src="assets/js/script.js"></script>
-  <script src="assets/js/todo.js"></script>
+    <div class="personalize-panel" id="personalize-panel">
+      <button id="close-personalize">x</button>
+
+    <h3>Personalize</h3>
+
+    <div class="setting-group">
+      <p>Theme</p>
+      <button data-theme="ocean">Ocean</button>
+      <button data-theme="midnight">Midnight</button>
+      <button data-theme="sakura">Sakura</button>
+    </div>
+
+    <div class="setting-group">
+      <p>Wallpaper Preset</p>
+      <button data-wallpaper="image/bg.png">Default</button>
+      <button data-wallpaper="image/midnight.png">Midnight</button>
+      <button data-wallpaper="image/sakura.png">Sakura</button>
+    </div>
+
+    <div class="setting-group">
+      <p>Custom Wallpaper</p>
+
+      <label for="wallpaper-input" class="upload-btn">Choose Local</label>
+      <input type="file" id="wallpaper-input" accept="image/*">
+
+      <div class="url-wallpaper">
+        <input type="url" id="wallpaper-url" placeholder="Paste image URL...">
+        <button id="apply-wallpaper-url">Apply URL</button>
+      </div>
+
+      <button id="reset-wallpaper">Reset Wallpaper</button>
+    </div>
+  </div>
+
+<script src="assets/js/script.js"></script>
+<script src="assets/js/todo.js"></script>
+<script src="assets/js/wall.js"></script>
 </body>
 </html>

@@ -1,0 +1,102 @@
+/* Wallpaper Custom */
+.wallpaper-control{
+  position:fixed;
+  left:24px;
+  bottom:24px;
+  z-index:999;
+
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  border-radius:16px;
+  padding:10px;
+
+  backdrop-filter:blur(12px);
+}
+
+.wallpaper-control button,
+.personalize-panel button,
+.upload-btn{
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--glass-border);
+  background:var(--ocean-soft);
+  color:var(--text);
+  cursor:pointer;
+}
+
+.wallpaper-control button:hover,
+.personalize-panel button:hover,
+.upload-btn:hover{
+  background:var(--ocean-strong);
+  border-color:var(--ocean-glow);
+}
+
+.personalize-panel{
+  position:fixed;
+  left:24px;
+  bottom:80px;
+  width:320px;
+  padding:18px;
+  border-radius:18px;
+
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  backdrop-filter:blur(14px);
+
+  z-index:999;
+  transform:translateY(20px);
+  opacity:0;
+  pointer-events:none;
+  transition:.3s ease;
+}
+
+.personalize-panel.active{
+  transform:translateY(0);
+  opacity:1;
+  pointer-events:auto;
+}
+
+#close-personalize{
+  float:right;
+  padding:4px 9px;
+}
+
+.setting-group{
+  margin-top:16px;
+}
+
+.setting-group p{
+  margin-bottom:8px;
+  color:var(--text-muted);
+  font-size:14px;
+}
+
+.setting-group button{
+  margin:4px 4px 4px 0;
+}
+
+#wallpaper-input{
+  display:none;
+}
+
+.upload-btn{
+  display:inline-block;
+  margin-bottom:8px;
+}
+
+.url-wallpaper{
+  display:flex;
+  gap:8px;
+  margin:8px 0;
+}
+
+#wallpaper-url{
+  flex:1;
+  min-width:0;
+  padding:8px 10px;
+  border-radius:10px;
+  border:1px solid var(--glass-border);
+  background:var(--ocean-soft);
+  color:var(--text);
+  outline:none;
+}
