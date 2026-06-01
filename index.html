@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/logo.png" type="image/png">
     <title>Ocean Startpage</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/todo.css">
 </head>
 <body>
     <header>
@@ -13,7 +16,7 @@
 
       <div class="widgets">
         <div class="widget-card">
-            <span>Weather<span>
+            <span>Weather</span>
             <p class="weather-main">
               <span id="weather-icon">☁️</span>
               <b id="weather-temp">--°C</b>
@@ -23,7 +26,7 @@
 
         <div class="widget-card">
           <span>Currency</span>
-          <p class=weather-main>
+          <p class="weather-main">
             <span>💵</span>
             <span id="currency-rate">$1 = -- IDR</span>
           </p>
@@ -35,6 +38,34 @@
         <p id="date">June 29, 2009</p>
         <h1 id="clock">00:00:00</h1>
       </div>
+
+      <section class="todo-preview">
+        <h3>Priority Tasks</h3>
+
+        <ol id="priority-tasks">
+          <li>No Priority tasks yet</li>
+        </ol>
+
+        <button id="open-todo">Open Tasks</button>
+      </section>
+
+      <aside class="todo-panel" id="todo-panel">
+        <button id="close-todo">x</button>
+
+        <h2>Todo List</h2>
+
+        <form id="todo-form">
+          <textarea id="todo-input" placeholder="Add new task..."></textarea>
+          <select id="todo-color">
+            <option value="ocean">Ocean</option>
+            <option value="sea">Sea</option>
+            <option value="cyan">Cyan</option>
+          </select>
+          <button type="submit">Add</button>
+        </form>
+        
+        <ul id="todo-list"></ul>
+      </aside>
 
     </header>
     <main class="hero">
@@ -76,9 +107,10 @@
             <span>ChatGPT</span>
           </a>
         </li>
-
       </ul>
+
     </main>
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/todo.js"></script>
 </body>
 </html>
