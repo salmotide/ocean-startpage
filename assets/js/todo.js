@@ -13,13 +13,18 @@ function saveTasks() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-openTodo.addEventListener("click", () => {
-  todoPanel.classList.add("active");
-});
+function toggleTodo() {
+  todoPanel.classList.toggle("active");
 
-closeTodo.addEventListener("click", () => {
-  todoPanel.classList.remove("active");
-});
+  if (todoPanel.classList.contains("active")) {
+    openTodo.textContent = "Close Tasks";
+  } else {
+    openTodo.textContent = "Open Tasks";
+  }
+}
+
+openTodo.addEventListener("click", toggleTodo);
+closeTodo.addEventListener("click", toggleTodo);
 
 function renderTasks() {
   todoList.innerHTML = "";
@@ -66,7 +71,7 @@ function renderPriorityTasks() {
 
 function togglePriority(index) {
   tasks[index].priority = !tasks[index].priority;
-  saveTasks()
+  saveTasks();
   renderTasks();
 }
 function deleteTask(index) {

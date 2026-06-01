@@ -3,13 +3,22 @@ const openPersonalize = document.getElementById("open-personalize");
 const closePersonalize = document.getElementById("close-personalize");
 const personalizePanel = document.getElementById("personalize-panel");
 
-openPersonalize.addEventListener("click", () => {
-  personalizePanel.classList.add("active");
-});
+function personalPanel() {
+  personalizePanel.classList.toggle("active");
 
-closePersonalize.addEventListener("click", () => {
-  personalizePanel.classList.remove("active");
-});
+  if (personalizePanel.classList.contains("active")) {
+    openPersonalize.textContent = "Customized";
+  } else {
+    openPersonalize.textContent = "Customize";
+  }
+}
+
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+openPersonalize.addEventListener("click", personalPanel);
+closePersonalize.addEventListener("click", personalPanel);
 
 const wallpaperInput = document.getElementById("wallpaper-input");
 const resetWallpaper = document.getElementById("reset-wallpaper");
