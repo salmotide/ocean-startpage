@@ -6,9 +6,23 @@
 
 A customizable browser startpage inspired by ocean themes, desktop pets, and productivity tools.
 
-![Screenshot Here](image/screenshots/main.webp)
+![Ocean Startpage Preview](image/screenshots/main.webp)
 
 **🌐 Live Demo:** https://salmotide.github.io/ocean-startpage/
+
+---
+
+## Table of Contents
+
+- Overview
+- Installation
+- Features
+- Pixel Character Companion
+- Local Storage
+- Project Structure
+- Screenshots
+- Future Plans
+- License
 
 ---
 
@@ -18,6 +32,10 @@ Clone repository:
 
 ```bash
 git clone https://github.com/salmotide/ocean-startpage.git
+cd ocean-startpage
+```
+
+Open `index.html` in your browser or use Live Server.
 
 ## Overview
 
@@ -197,9 +215,9 @@ Central place for customization.
 
 # Pixel Character Companion
 
-A desktop-pet style character that lives on the startpage.
+The pixel companion is the signature feature of Ocean Startpage.
 
-The character is fully interactive.
+It can walk, interact with UI elements, display messages, follow the cursor, and be controlled directly by the user.
 
 ---
 
@@ -419,6 +437,6 @@ Planned features:
 
 # License
 
-This project is open source.
+Licensed under the MIT License.
 
-Feel free to modify and personalize it for your own use.
+See the LICENSE file for more information.
