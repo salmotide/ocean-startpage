@@ -22,7 +22,7 @@ closePersonalize.addEventListener("click", personalPanel);
 
 const wallpaperInput = document.getElementById("wallpaper-input");
 const resetWallpaper = document.getElementById("reset-wallpaper");
-const defaultWallpaper = "image/bg.png";
+const defaultWallpaper = "image/bg.webp";
 
 function setWallpaper(imageUrl) {
   document.body.style.backgroundImage = `
@@ -125,7 +125,7 @@ applyWallpaperUrl.addEventListener("click", () => {
   };
 
   testImage.onerror = () => {
-    alert("URL harus direct image, bukan halaman web. Pakai link yang berakhir .jpg, .png, atau .webp.");
+    alert("URL harus direct image, bukan halaman web. Pakai link yang berakhir .jpg, .webp, atau .webp.");
   };
 
   testImage.src = url;

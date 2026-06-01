@@ -1,12 +1,23 @@
 # Ocean Startpage
+![HTML](https://img.shields.io/badge/HTML-5-orange)
+![CSS](https://img.shields.io/badge/CSS-3-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 A customizable browser startpage inspired by ocean themes, desktop pets, and productivity tools.
 
-![Screenshot Here](assets/screenshots/main.png)
+![Screenshot Here](image/screenshots/main.webp)
 
-Live: ![Live](https://salmotide.github.io/ocean-startpage/)
+**🌐 Live Demo:** https://salmotide.github.io/ocean-startpage/
 
 ---
+
+# Installation
+
+Clone repository:
+
+```bash
+git clone https://github.com/salmotide/ocean-startpage.git
 
 ## Overview
 
@@ -342,34 +353,23 @@ Settings remain after refreshing or reopening the browser.
 # Project Structure
 
 ```text
+
 Ocean-Startpage/
-│
-├── index.html
-│
 ├── assets/
 │   ├── css/
-│   │   ├── color.css
-│   │   ├── style.css
-│   │   ├── todo.css
-│   │   ├── wall.css
-│   │   └── character.css
-│   │
-│   ├── js/
-│   │   ├── script.js
-│   │   ├── todo.js
-│   │   ├── wall.js
-│   │   └── character.js
-│   │
-│   └── screenshots/
+│   └── js/
 │
 ├── image/
 │   ├── hatsu/
-│   ├── logo.png
-│   ├── bg.png
-│   ├── midnight.png
-│   └── sakura.png
+│   ├── screenshots/
+│   ├── bg.webp
+│   ├── midnight.webp
+│   ├── sakura.webp
+│   └── logo.webp
 │
+├── index.html
 └── README.md
+
 ```
 
 ---
@@ -378,25 +378,25 @@ Ocean-Startpage/
 
 ## Main Page
 
-![Main Page](assets/screenshots/main.png)
+![Main Page](image/screenshots/main.webp)
 
 ---
 
 ## Todo List
 
-![Todo List](assets/screenshots/todo.png)
+![Todo List](image/screenshots/todo.webp)
 
 ---
 
 ## Personalize Panel
 
-![Personalize Panel](assets/screenshots/personalize.png)
+![Personalize Panel](image/screenshots/personalize.webp)
 
 ---
 
 ## Character Companion
 
-![Character Companion](assets/screenshots/character.png)
+![Character Companion](image/screenshots/character.webp)
 
 ---
 
