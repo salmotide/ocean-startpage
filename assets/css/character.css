@@ -20,6 +20,10 @@
   margin-bottom:10px;
 }
 
+.setting-group{
+  display: none;
+}
+
 .key-input{
   width:58px;
   padding:8px;
