@@ -51,6 +51,7 @@
   transform: translateX(100%);
   transition: .35s ease;
   z-index: 10;
+  display: none;
 }
 
 .todo-panel.active{
@@ -58,6 +59,7 @@
   margin: 10px;
   border-radius: 20px;
   border: 1px solid var(--ocean-glow);
+  display: block;
 }
 
 #close-todo{
