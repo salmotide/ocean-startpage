@@ -90,9 +90,9 @@ youtubeLink.addEventListener("click", (event) => {
   const query = searchInput.value.trim();
 
   if (query) {
-    window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`);
+    window.location.href = (`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`);
   } else{
-    window.open("https://youtube.com");
+    window.location.href = ("https://youtube.com");
   }
 });
 
@@ -104,9 +104,9 @@ githubLink.addEventListener("click", (event) => {
   const query = searchInput.value.trim();
 
   if(query) {
-    window.open(`https://github.com/search?q=${encodeURIComponent(query)}`)
+    window.location.href = (`https://github.com/search?q=${encodeURIComponent(query)}`)
   } else{
-  window.open(`https://github.com`)
+  window.location.href = (`https://github.com`)
   }
 });
 
@@ -118,8 +118,8 @@ wikiLink.addEventListener("click", (event) => {
   const query = searchInput.value.trim();
 
   if(query) {
-    window.open(`https://en.wikipedia.org/wiki/${encodeURIComponent(query)}`)
+    window.location.href = (`https://en.wikipedia.org/wiki/${encodeURIComponent(query)}`)
   } else {
-    window.open(`https://en.wikipedia.org/wiki/`)
+    window.location.href = (`https://en.wikipedia.org/wiki/`)
   }
 });
